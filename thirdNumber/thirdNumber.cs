@@ -1,5 +1,5 @@
 ﻿Console.Write("введите число: ");
-int number = int.Parse(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 if (number <= 99)
 {
     Console.WriteLine("третьей цифры нет");
@@ -28,12 +28,12 @@ if (number > 999 & number <= 9999)
 }
 if (number > 9999 & number <= 99999)
 {
-    if (number / 100 % 10 == 0)
+    if (number % 1000 / 100 == 0)
     {
         Console.WriteLine("третья цифра: 0");
     }
     else
     {
-        Console.WriteLine("третья цифра: " + number / 100 % 10);
+        Console.WriteLine("третья цифра: " + number % 1000 / 100);
     }
 }
