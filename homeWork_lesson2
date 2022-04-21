@@ -1,0 +1,63 @@
+//задача 1
+
+int number = new Random().Next(100, 1000);
+Console.WriteLine("наше число: " + number);
+int number1 = number / 100;
+int number2 = number % 10;
+Console.WriteLine($"удалили вторую цифру: {number1}{number2}");
+
+//задача 2
+
+Console.Write("введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number <= 99)
+{
+    Console.WriteLine("третьей цифры нет");
+}
+if (number > 99 & number <= 999)
+{
+    if (number % 10 == 0)
+    {
+        Console.WriteLine("третья цифра: 0");
+    }
+    else
+    {
+        Console.WriteLine("третья цифра: " + number % 10);
+    }
+}
+if (number > 999 & number <= 9999)
+{
+    if (number % 100 / 10 == 0)
+    {
+        Console.WriteLine("третья цифра: 0");
+    }
+    else
+    {
+        Console.WriteLine("третья цифра: " + number % 100 / 10);
+    }
+}
+if (number > 9999 & number <= 99999)
+{
+    if (number % 1000 / 100 == 0)
+    {
+        Console.WriteLine("третья цифра: 0");
+    }
+    else
+    {
+        Console.WriteLine("третья цифра: " + number % 1000 / 100);
+    }
+}
+
+//задача 3
+
+Console.Write("введите цифру, обозначающую день недели: ");
+int day = int.Parse(Console.ReadLine());
+if (day >= 1 & day <= 5)
+{
+    Console.WriteLine("рабочий день :)");
+}
+if (day >= 6 & day <= 7)
+{
+    Console.WriteLine("(: ВЫХОДНОЙ :)");
+}
+else Console.WriteLine("таких дней в неделе не существует");
